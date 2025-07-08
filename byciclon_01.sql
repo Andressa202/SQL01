@@ -17,7 +17,7 @@ CREATE TABLE tb_cliente(
 CREATE TABLE tb_vendedores(
 	idVendedor INT PRIMARY KEY IDENTITY(1,1),
 	idEndereco INT NOT NULL, 
-	idRegional INT NOT NULL,
+	idReginal INT NOT NULL,
 	nome VARCHAR (40) NOT NULL, 
 	email VARCHAR (30) NOT NULL,
 	cpf VARCHAR (11) NOT NULL
@@ -43,7 +43,7 @@ CREATE TABLE tb_pedidos(
 CREATE TABLE tb_itens_pedidos(
 	idItem INT IDENTITY(1,1) PRIMARY KEY,
 	idPedido INT NOT NULL,
-	idproduto INT NOT NULL,
+	idProduto INT NOT NULL,
 	quantidade INT NOT NULL,
 	precoUnitario MONEY NOT NULL,
 	desconto MONEY NOT NULL
@@ -59,7 +59,7 @@ CREATE TABLE tb_regional(
 CREATE TABLE tb_enderecos(
 	idEndereco INT PRIMARY KEY IDENTITY(1,1),
 	pais VARCHAR(50) NOT NULL,
-	uf VARCHAR NOT NULL,
+	uf VARCHAR (50) NOT NULL,
 	cidade VARCHAR (50) NOT NULL,
 	bairro VARCHAR(50) NOT NULL,
 	rua VARCHAR(50) NOT NULL,
